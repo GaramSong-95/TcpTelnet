@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#F8EDED"
+    android:fitsSystemWindows="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="135dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/robot" />
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ToggleButton
+            android:id="@+id/toggleButtonConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="#EDBFE4"
+            android:text="ToggleButton"
+            android:textColor="#000000"
+            android:textOff="연결"
+            android:textOn="해제"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonGo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="#F6ECEC"
+            android:text="목표지점"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonHome"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="#F6ECEC"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonSpray"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="#F6ECEC"
+            android:text="SPRAY"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:layout_weight="1"
+        android:background="#C6D9ED"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomLayout"
+        app:layout_constraintVertical_bias="0.076">
+
+        <ScrollView
+            android:id="@+id/scrollViewRecv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="always"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewRecv"
+                    android:layout_width="match_parent"
+                    android:layout_height="539dp"
+                    android:layout_weight="0"
+                    android:scrollbars="vertical"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <ScrollView
+            android:id="@+id/scrollViewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="명령을 입력하세요"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/buttonSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:backgroundTint="#B8B0B0"
+                    android:text="전송"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
